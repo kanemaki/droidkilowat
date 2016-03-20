@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.eti.kanemaki.droidkilowatt.Main4Activity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:background="#000000"
+        android:alpha="0.25"
+        android:scaleType="centerCrop"
+        android:src="@drawable/kwh_dribbble"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Passo 4: Calculando o consumo mensal."
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@android:color/black"
+        android:textAllCaps="true"
+        android:id="@+id/textView1c"
+        android:layout_margin="20sp"/>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/textView1c"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conte o número de dias em que o aparelho fica ligado \n durante o mês e multiplique: \n 4 kW * 20 dias = 80 kW"
+            android:textSize="21sp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:id="@+id/textView1d"
+            android:layout_margin="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linear1"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="2"
+            android:id="@+id/k6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" kW * "
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:id="@+id/textViewcal"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="2"
+            android:id="@+id/k7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" dias = "
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:id="@+id/textViewcalc"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 0 "
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:id="@+id/k8"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" kW "
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:id="@+id/textView7"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="calcular"
+            android:id="@+id/buttonCalc1"
+            android:onClick="Calcular3"/>
+
+    </LinearLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ir Passo 5"
+        android:id="@+id/buttonProx4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20sp"
+        android:onClick="Proximo"/>
+
+</RelativeLayout>

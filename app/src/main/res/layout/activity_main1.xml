@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.eti.kanemaki.droidkilowatt.Main1Activity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:background="#000000"
+        android:alpha="0.25"
+        android:scaleType="centerCrop"
+        android:src="@drawable/kwh_dribbble"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Passo 1: Descobrir qual é o consumo do aparelho."
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@android:color/black"
+        android:textAllCaps="true"
+        android:id="@+id/textView1c"
+        android:layout_margin="20sp"/>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textView1c"
+        android:layout_alignParentLeft="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\n Todo fabricante apresenta,\n no manual do aparelho, \n a indicação de consumo elétrico em watts.\n Procure por esta informação no manual \n Para esta dica usarei um consumo (máximo) de 500"
+            android:textSize="21sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:id="@+id/textView1d"
+            android:layout_margin="20sp"/>
+
+    </LinearLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ir Passo 2"
+        android:id="@+id/buttonProx1"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20sp"
+        android:onClick="Proximo"/>
+
+</RelativeLayout>

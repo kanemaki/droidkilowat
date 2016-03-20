@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.eti.kanemaki.droidkilowatt.Main3Activity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:background="#000000"
+        android:alpha="0.25"
+        android:scaleType="centerCrop"
+        android:src="@drawable/kwh_dribbble"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Passo 3: Calculando o consumo diário."
+        android:textSize="25sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@android:color/black"
+        android:textAllCaps="true"
+        android:id="@+id/textView1c"
+        android:layout_margin="20sp"/>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/textView1c"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Também fácil: pegue o resultado da divisão anterior \n e multiplique pelo número de horas em que o aparelho é usado durante o dia.
+\n 0,5 kWh * 8 horas = 4 kW"
+            android:textSize="21sp"
+            android:fontFamily="sans-serif-light"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/black"
+            android:id="@+id/textView1d"
+            android:layout_margin="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linear1"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="2"
+            android:id="@+id/k3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" kWh * "
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:id="@+id/textViewcalc"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="1"
+            android:id="@+id/k4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="horas = "
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:id="@+id/textView6"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 0 "
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:id="@+id/k5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" kW "
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@android:color/black"
+            android:id="@+id/textView7"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="calcular"
+            android:id="@+id/buttonCalc1"
+            android:onClick="Calcular2"/>
+
+    </LinearLayout>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ir Passo 4"
+        android:id="@+id/buttonProx3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20sp"
+        android:onClick="Proximo"/>
+
+</RelativeLayout>
